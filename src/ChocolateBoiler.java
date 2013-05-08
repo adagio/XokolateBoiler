@@ -18,7 +18,7 @@ public class ChocolateBoiler {
 	    LOGGER.setLevel(Level.WARNING);
 	}
 	
-	public static ChocolateBoiler getInstance() {
+	public static synchronized ChocolateBoiler getInstance() {
 		if (uniqueInstance == null) {
 			uniqueInstance = new ChocolateBoiler();
 		}
