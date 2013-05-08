@@ -1,5 +1,5 @@
 
-import java.util.logging.Level;
+// import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class ChocolateBoiler {
@@ -7,21 +7,18 @@ public class ChocolateBoiler {
 	private boolean empty;
 	private boolean boiled;
 	
-	private static ChocolateBoiler uniqueInstance;
+	private static ChocolateBoiler uniqueInstance = new ChocolateBoiler();
 	
-	private final static Logger LOGGER = Logger.getLogger(ChocolateBoiler.class.getName());
+	private static Logger LOGGER = Logger.getLogger(ChocolateBoiler.class.getName());
 	
 	private ChocolateBoiler() {
 		empty = true;
 		boiled = false;
 		
-	    LOGGER.setLevel(Level.WARNING);
+	    // LOGGER.setLevel(Level.WARNING);
 	}
 	
-	public static synchronized ChocolateBoiler getInstance() {
-		if (uniqueInstance == null) {
-			uniqueInstance = new ChocolateBoiler();
-		}
+	public static ChocolateBoiler getInstance() {
 		return uniqueInstance;
 	}
 	
