@@ -6,6 +6,7 @@ public class WantMilk {
 	 */
 	public static void main(String[] args) {
 		
+		// latter commit on eagerly created instance
 		
 		ChocolateBoiler myChocolateBoiler = ChocolateBoiler.getInstance();
 		ChocolateBoiler myChocolateBoiler2 = ChocolateBoiler.getInstance();
